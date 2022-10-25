@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217deg, 54%, 11%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main-container {
+  background-color: hsl(216deg, 50%, 16%);
+  margin: 60px 0;
+  width: 330px;
+  height: 545px;
+  padding: 25px;
+  border-radius: 20px;
+}
+@media (min-width: 900px) {
+  .main-container {
+    margin: 150px 0;
+    width: 350px;
+    height: 600px;
+  }
+}
+.main-container .content__img {
+  background-image: url("../images/image-equilibrium.jpg");
+  background-size: cover;
+  width: 280px;
+  height: 280px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.main-container .content__img-eyes {
+  background-image: url("../images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 280px;
+  height: 280px;
+  background-color: hsla(178deg, 100%, 50%, 0.5);
+  opacity: 0;
+  transition: 300ms;
+}
+.main-container .content__img-eyes:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.main-container .content__title {
+  font-size: 1.2em;
+  color: hsl(0deg, 0%, 100%);
+  margin-bottom: 16px;
+  transition: 300ms;
+}
+.main-container .content__title:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+.main-container .content__paragraph {
+  color: hsl(215deg, 51%, 70%);
+  font-weight: 100;
+  font-size: 0.9em;
+  margin-bottom: 16px;
+}
+.main-container .content__balance {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid hsl(215deg, 32%, 27%);
+}
+.main-container .content__balance-p1 {
+  color: hsl(178deg, 100%, 50%);
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+.main-container .content__balance-p1-img {
+  padding-right: 6px;
+}
+@media (min-width: 900px) {
+  .main-container .content__balance-p1 {
+    font-size: 0.95em;
+  }
+}
+.main-container .content__balance-p2 {
+  color: hsl(215deg, 51%, 70%);
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+}
+.main-container .content__balance-p2-img {
+  padding-right: 6px;
+}
+@media (min-width: 900px) {
+  .main-container .content__balance-p2 {
+    font-size: 0.95em;
+  }
+}
+.main-container .content__avatar {
+  display: flex;
+  align-items: center;
+}
+.main-container .content__avatar-img {
+  border: 1px solid hsl(0deg, 0%, 100%);
+  border-radius: 50%;
+  height: 35px;
+}
+.main-container .content__avatar-creation {
+  margin-left: 15px;
+  color: hsl(215deg, 51%, 70%);
+  font-size: 0.85em;
+  font-weight: 100;
+}
+.main-container .content__avatar-creation span {
+  color: hsl(0deg, 0%, 100%);
+  transition: 300ms;
+}
+.main-container .content__avatar-creation span:hover {
+  cursor: pointer;
+  color: hsl(178deg, 100%, 50%);
+}
+@media (min-width: 900px) {
+  .main-container .content__img {
+    width: 300px;
+    height: 300px;
+    margin-bottom: 26px;
+  }
+  .main-container .content__img-eyes {
+    width: 300px;
+    height: 300px;
+  }
+  .main-container .content__title {
+    font-size: 1.25em;
+    margin-bottom: 20px;
+  }
+  .main-container .content__paragraph {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+  .main-container .content__balance {
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+  }
+  .main-container .content__balance-p1 {
+    color: hsl(178deg, 100%, 50%);
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+  }
+  .main-container .content__balance-p1-img {
+    padding-right: 6px;
+  }
+}
+@media (min-width: 900px) and (min-width: 900px) {
+  .main-container .content__balance-p1 {
+    font-size: 0.95em;
+  }
+}
+@media (min-width: 900px) {
+  .main-container .content__balance-p2 {
+    color: hsl(215deg, 51%, 70%);
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+  }
+  .main-container .content__balance-p2-img {
+    padding-right: 6px;
+  }
+}
+@media (min-width: 900px) and (min-width: 900px) {
+  .main-container .content__balance-p2 {
+    font-size: 0.95em;
+  }
+}
+@media (min-width: 900px) {
+  .main-container .content__avatar-img {
+    height: 38px;
+  }
+  .main-container .content__avatar-creation {
+    font-size: 0.89em;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 0 0 20px;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.attribution a {
+  color: hsl(215deg, 51%, 70%);
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=styles.css.map */

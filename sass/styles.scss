@@ -1,0 +1,174 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+    font-family: v.$Font;
+    background-color: v.$Very-dark-blue-main;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+// ================= Main ================== //
+.main-container{
+    background-color: v.$Very-dark-blue-card;
+    margin: 60px 0;
+    width: 330px;
+    height: 545px;
+    padding: 25px;
+    border-radius: 20px;
+    @media(min-width: 900px){
+        margin: 150px 0;
+        width: 350px;
+        height: 600px;
+    }
+    .content{
+        &__img{
+            background-image: url('../images/image-equilibrium.jpg');
+            background-size: cover;
+            width: 280px;
+            height: 280px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            &-eyes{
+                background-image: url('../images/icon-view.svg');
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 280px;
+                height: 280px;
+                background-color: v.$Cyan-image;
+                opacity: 0;
+                transition: 300ms;
+                &:hover{
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &__title{
+            font-size: 1.2em;
+            color: v.$White;
+            margin-bottom: 16px;
+            transition: 300ms;
+            &:hover{
+                cursor: pointer;
+                color: v.$Cyan;
+            }
+        }
+        &__paragraph{
+            color: v.$Soft-blue;
+            font-weight: 100;
+            font-size: .9em;
+            margin-bottom: 16px;
+        }
+
+        //Balance
+        &__balance{
+            
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 18px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid v.$Very-dark-blue-line;
+            &-p1{
+                @include m.eth(v.$Cyan);
+            }
+           
+            &-p2{
+                @include m.eth(v.$Soft-blue);
+            }
+        }
+
+        //Avatar
+        &__avatar{
+            display: flex;
+            align-items: center;
+            &-img{
+                border: 1px solid v.$White;
+                border-radius: 50%;
+                height: 35px;
+
+            }
+            &-creation{
+                margin-left: 15px;
+                color: v.$Soft-blue;
+                font-size: .85em;
+                font-weight: 100;
+            }
+            &-creation span{
+                color: v.$White;
+                transition: 300ms;
+            &:hover{
+                cursor: pointer;
+                color: v.$Cyan;
+            }
+            }
+        }
+        @media(min-width: 900px){
+            &__img{
+                width: 300px;
+                height: 300px;
+                margin-bottom: 26px;   
+                &-eyes{
+                    width: 300px;
+                    height: 300px;
+                }
+            }
+            &__title{
+                font-size: 1.25em;
+                margin-bottom: 20px;
+            }
+            &__paragraph{
+                font-size: 1em;
+                margin-bottom: 20px;
+            }
+    
+            //Balance
+            &__balance{
+                padding-bottom: 22px;
+                margin-bottom: 22px;
+                &-p1{
+                    @include m.eth(v.$Cyan);
+                }
+               
+                &-p2{
+                    @include m.eth(v.$Soft-blue);
+                }
+            }
+    
+            //Avatar
+            &__avatar{
+                &-img{
+                    height: 38px;
+    
+                }
+                &-creation{
+                    font-size: .89em;
+                }
+               
+            }
+        }
+    }
+}
+
+// ================ Footer ================== //
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    margin: 0 0 20px ;
+    color: v.$White;
+}
+.attribution a { 
+    color: v.$Soft-blue;
+    text-decoration: none;
+}
